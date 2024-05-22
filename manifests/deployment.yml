@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: josedanielakswithap 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: josedanielakswithap
+  template:
+    metadata:
+      labels:
+        app: josedanielakswithap 
+    spec:
+      containers:
+        - name: josedanielakswithap 
+          image: contregjd2024.azurecr.io/josedanielakswithap
+          ports:
+          - containerPort: 8080
